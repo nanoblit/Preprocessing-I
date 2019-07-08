@@ -325,35 +325,46 @@ p {
 #content > #columns > #good-at > ul > li:nth-child(even) {
   background-color: #f3eefe;
 }
-#content > #work-history > table {
+#content > #work-history > table,
+#education > table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 2rem;
 }
-#content > #work-history > table tr > th {
+#content > #work-history > table tr > th,
+#education > table tr > th {
   font-weight: bold;
 }
 #content > #work-history > table tr > td,
-#content > #work-history > table tr > th {
+#education > table tr > td,
+#content > #work-history > table tr > th,
+#education > table tr > th {
   border: 0.2rem solid #631aec;
   text-align: left;
   padding: 0.8rem;
 }
 #content > #work-history > table tr > td:first-of-type,
-#content > #work-history > table tr > th:first-of-type {
+#education > table tr > td:first-of-type,
+#content > #work-history > table tr > th:first-of-type,
+#education > table tr > th:first-of-type {
   border-left: none;
 }
 #content > #work-history > table tr > td:last-of-type,
-#content > #work-history > table tr > th:last-of-type {
+#education > table tr > td:last-of-type,
+#content > #work-history > table tr > th:last-of-type,
+#education > table tr > th:last-of-type {
   border-right: none;
 }
-#content > #work-history > table tr > th {
+#content > #work-history > table tr > th,
+#education > table tr > th {
   border-top: none;
 }
-#content > #work-history > table tr:nth-child(even) {
+#content > #work-history > table tr:nth-child(even),
+#education > table tr:nth-child(even) {
   background-color: #f3eefe;
 }
-#content > #work-history > table tr:last-of-type > td {
+#content > #work-history > table tr:last-of-type > td,
+#education > table tr:last-of-type > td {
   border-bottom: none;
 }
 #cards {
@@ -362,27 +373,31 @@ p {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-#cards div {
+#cards > div {
   border: 2px solid #631aec;
   border-radius: 0.5rem;
   width: 48%;
   margin-bottom: 2rem;
 }
 @media screen and (max-width: 500px) {
-  #cards div {
+  #cards > div {
     width: 100%;
   }
 }
-#cards div img {
+#cards > div img {
   width: 100%;
   border-radius: 0.5rem;
 }
-#cards div h2,
-#cards div p,
-#cards div a {
+#cards > div h2,
+#cards > div p,
+#cards > div a {
   margin: 1rem 1rem;
 }
-#cards div a {
+#cards > div .portfolio-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+#cards > div .portfolio-buttons a {
   display: inline-block;
   color: #631aec;
   text-decoration: none;
@@ -392,10 +407,12 @@ p {
   margin-top: 2rem;
   transition: background-color 0.5s;
   -webkit-tap-highlight-color: transparent;
+  margin-left: 0;
+  margin-right: 0;
 }
-#cards div a:hover {
+#cards > div .portfolio-buttons a:hover {
   background-color: #f3eefe;
 }
-#cards div a:focus {
+#cards > div .portfolio-buttons a:focus {
   outline: 0;
 }

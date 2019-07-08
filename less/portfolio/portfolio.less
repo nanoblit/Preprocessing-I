@@ -1,30 +1,39 @@
 #cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
-    div {
-        border: 2px solid @primaryColor;
-        border-radius: @borderRadius;
-        width: 48%;
-        margin-bottom: 2rem;
+  > div {
+    border: 2px solid @primaryColor;
+    border-radius: @borderRadius;
+    width: 48%;
+    margin-bottom: 2rem;
 
-        @media @mobileBreakpoint {
-            width: 100%;
-        }
-
-        img {
-            width: 100%;
-            border-radius: @borderRadius;
-        }
-
-        h2, p, a {
-            margin: 1rem 1rem;
-        }
-
-        a {
-            .button();
-        }
+    @media @mobileBreakpoint {
+      width: 100%;
     }
+
+    img {
+      width: 100%;
+      border-radius: @borderRadius;
+    }
+
+    h2,
+    p,
+    a {
+      margin: 1rem 1rem;
+    }
+
+    .portfolio-buttons {
+      display: flex;
+      justify-content: space-evenly;
+
+      a {
+        .button();
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
 }
